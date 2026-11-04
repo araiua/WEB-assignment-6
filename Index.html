@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment 6 - Part 1 & 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Part 1 & 2 (Basics & Effects)</a>
+        <a href="dom.html">Part 3 (DOM & Forms)</a>
+        <a href="animation.html">Part 4 (Animations)</a>
+        <a href="miniproject.html">Part 5 (Mini Project)</a>
+    </nav>
+
+    <div class="container">
+        <h1>Part 1. Getting Started & Selectors</h1>
+        
+        <section>
+            <h2>Task 1. Selectors & CSS</h2>
+            <p id="text-target">Original Text</p>
+            <div class="html-target">Original HTML</div>
+            <br>
+            <button id="btn-change-text">Change Text (.text())</button>
+            <button id="btn-change-html">Change HTML (.html())</button>
+            <button id="btn-change-css">Change Style (.css())</button>
+        </section>
+
+        <h1>Part 2. jQuery Effects</h1>
+
+        <section>
+            <h2>Task 2. Visibility Methods</h2>
+            <p id="vis-paragraph">This text will be hidden or shown.</p>
+            <button id="btn-hide">Hide</button>
+            <button id="btn-show">Show</button>
+            <button id="btn-toggle">Toggle</button>
+        </section>
+
+        <section>
+            <h2>Task 3. Fade Methods</h2>
+            <img id="fade-img" src="https://via.placeholder.com/150" alt="Placeholder Image"><br>
+            <button id="btn-fade-in">Fade In</button>
+            <button id="btn-fade-out">Fade Out</button>
+            <button id="btn-fade-toggle">Fade Toggle</button>
+        </section>
+
+        <section>
+            <h2>Task 4. Slide Methods</h2>
+            <button id="btn-slide-toggle">Toggle Panel</button>
+            <div id="slide-panel" class="panel">
+                This is a collapsible panel controlled by slide effects.
+            </div>
+        </section>
+    </div>
+    <script>
+        $(document).ready(function() {
+            console.log("jQuery is ready!");
+
+            $("#btn-change-text").click(function() {
+                $("#text-target").text("Text has been changed using .text()!");
+            });
+
+            $("#btn-change-html").click(function() {
+                $(".html-target").html("<strong>HTML content updated using .html()!</strong>");
+            });
+
+            $("#btn-change-css").click(function() {
+                $("#text-target").css({"color": "#ef4444", "font-weight": "bold", "font-size": "20px"});
+            });
+
+            $("#btn-hide").click(function() { $("#vis-paragraph").hide(); });
+            $("#btn-show").click(function() { $("#vis-paragraph").show(); });
+            $("#btn-toggle").click(function() { $("#vis-paragraph").toggle(); });
+
+            $("#btn-fade-in").click(function() { $("#fade-img").fadeIn(); });
+            $("#btn-fade-out").click(function() { $("#fade-img").fadeOut(); });
+            $("#btn-fade-toggle").click(function() { $("#fade-img").fadeToggle(); });
+
+            $("#btn-slide-toggle").click(function() {
+                $("#slide-panel").slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
