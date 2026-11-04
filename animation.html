@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - Part 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Part 1 & 2 (Basics & Effects)</a>
+        <a href="dom.html">Part 3 (DOM & Forms)</a>
+        <a href="animation.html" class="active">Part 4 (Animations)</a>
+        <a href="miniproject.html">Part 5 (Mini Project)</a>
+    </nav>
+
+    <div class="container">
+        <h1>Part 4. Animations</h1>
+
+        <section>
+            <h2>Task 8. Basic Animation</h2>
+            <button id="btn-basic-anim">Animate Size & Position</button>
+            <div id="box1" class="box"></div>
+        </section>
+
+        <section>
+            <h2>Task 9. Sequential Animations</h2>
+            <button id="btn-seq-anim">Run Sequential Steps</button>
+            <div id="box2" class="box" style="background-color: #10b981;"></div>
+        </section>
+
+        <section>
+            <h2>Task 10. Combined Animation</h2>
+            <button id="btn-comb-anim">Run Combined Animation</button>
+            <div id="box3" class="box" style="background-color: #8b5cf6;"></div>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn-basic-anim").click(function() {
+                $("#box1").animate({
+                    left: '150px',
+                    width: '120px',
+                    height: '120px'
+                }, 1000);
+            });
+
+            $("#btn-seq-anim").click(function() {
+                let box = $("#box2");
+                box.animate({ left: '200px' }, 800)
+                   .animate({ top: '100px' }, 800)
+                   .animate({ width: '40px', height: '40px' }, 800)
+                   .animate({ left: '0px', top: '0px', width: '80px', height: '80px' }, 800);
+            });
+
+            $("#btn-comb-anim").click(function() {
+                $("#box3").animate({
+                    left: '250px',
+                    opacity: '0.4',
+                    width: '140px',
+                    height: '140px'
+                }, 1200);
+            });
+        });
+    </script>
+</body>
+</html>
