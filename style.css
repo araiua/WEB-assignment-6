@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding-bottom: 40px;
+}
+
+.navbar {
+    background-color: #1e293b;
+    padding: 15px 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #3b82f6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.panel {
+    background: #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+    display: none;
+    margin-top: 10px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background-color: #ef4444;
+    position: relative;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.accordion-item {
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background: #f1f5f9;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-header:hover {
+    background: #e2e8f0;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background: #fff;
+}
