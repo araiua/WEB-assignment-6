@@ -1,6 +1,6 @@
 # Assignment #6: jQuery (Selectors, Effects, Animations)
 
-**Student:** Aizere  
+**Student:** Arai
 **Group:** SE-2529
 
 ## Description
@@ -17,4 +17,4 @@ This repository contains the completed tasks for Assignment #6, demonstrating DO
 
 ## Deployment Link
 
-- GitHub Pages: `https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/`
+- GitHub Pages: `https://github.com/araiua/WEB-assignment-6`
